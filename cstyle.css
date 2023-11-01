@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --modal-duration: 1s;
+    --primary-color: #30336b;
+    --secondary-color:#e63838;
+  }
+  
+
+
+.car-container{
+    background-color: rgb(147, 168, 168);
+    width: 450px;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    margin: 15px;   
+    display: block;
+}
+.car{
+    background-color: rgb(252, 212, 218);
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+    border: lightcoral 5px solid;
+    position: relative;
+    left: 12px;
+    box-shadow: inset -7px -7px pink;
+    
+     
+}
+.seat{
+    background-color: #444;
+    height: 25px;
+    width: 25px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+   
+    
+}
+.occupied{
+    background-color: rgb(44, 119, 119);
+}
+.selected{
+    background-color: rgb(81, 81, 250);
+}
+.u-selection{
+  background-color: rgb(255, 99, 43);
+}
+.first-row{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5px 7px 5px;
+    
+}
+.second-row{
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.seat:not(.occupied):not(.u-selection):hover{
+    cursor: pointer;
+    transform: scale(1.08,1.08);
+}
+.wheels{
+   display: flex;
+   height: 0;
+  
+   
+    
+    
+}
+.wheels2{
+    height: 0;
+}
+.wheel1{
+    
+    background-color: black;
+    width: 15px;
+    height: 35px;
+    position: relative;
+    top: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;     
+}
+.wheel2{
+    background-color: black;
+    width: 15px;
+    height: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;  
+    position: relative;
+    left: 94px;
+    top: 31px;
+}
+
+.wheel3{
+
+    background-color: black;
+    width: 15px;
+    height: 35px;
+    position: absolute;
+    top: 118px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ; 
+    left: 10;
+   
+}
+.wheel4{
+    background-color: black;
+    width: 15px;
+    height: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;  
+    position: absolute;
+    left: 119px;
+    top: 119px;
+}
+.light .leftlight{
+    background-color: gold;
+    height: 5px;
+    width: 25px;
+    position: relative;
+    left: 25px;
+    top: 5px;
+    
+}
+.rightlight{
+    background-color: gold;
+    height: 5px;
+    width: 25px;
+    position: relative;
+    left: 75px;
+}
+.index{
+    position: absolute;
+    height: 160px;
+    width: 270px;
+    background-color: ivory;
+    left: 160px;
+    border: 5px solid bisque;
+    border-radius: 10px; 
+}
+.indexx{
+  position: absolute;
+  height: 160px;
+  width: 270px;
+  background-color: ivory;
+  left: 160px;
+  bottom: 10px;
+  border: 5px solid bisque;
+  border-radius: 10px; 
+  text-align: center;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+.today{
+    margin: 50px;
+}
+.hh-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.route{
+    display: flex;
+    justify-content: space-between;
+}
+.route input{
+    width:150px;
+}
+.index{
+    text-align: center;
+}
+.index p{
+    font-size: medium;
+    padding-top: 3px;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.button{
+    height: 50px;
+    position: absolute;
+    left: 300px;
+}
+
+body {
+    transition: transform 0.3s ease;
+  }
+  
+
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .cta-btn {
+    
+    font-size: 50px;
+  }
+  
+  
+  
+  .modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .modal-container.show-modal {
+    display: block;
+  }
+  
+  .modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    
+  }
+  
+  .modal-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 15px;
+    
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .modal-form div {
+    margin: 15px 0;
+  }
+  
+  .modal-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+.start{
+    background-color: rgb(235, 235, 117);
+    height: 35px;
+    width: 100px;
+    box-shadow: 3px 3px ;
+    border-radius: 10px;
+}
+.finish{
+    background-color: rgb(235, 235, 117);
+    height: 35px;
+    width: 100px;
+    box-shadow: 3px 3px ;
+    border-radius: 10px;
+}
+
+.route-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.join{
+    position: absolute;
+    left: 200px;
+    top: 110px;
+}
+.none{
+  display: none;
+}
+.clock{
+    background-color: rgba(0, 0, 0, 0.911);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    left: 5px;
+    bottom: 50px;
+    padding-top: 5px;    
+}
+
+.clock p{
+    color: white;
+    font-size: small;
+}
+.flex-containerr{
+  display: flex;
+}
+#myInput{
+  border-radius: 10px;
+  width: 500px;
+}
+.today{
+  margin: 20px;
+}
+
+.search-box{
+  display: flex;
+}
+.search-box input{
+  margin: 5px;
+  border-radius: 10px;  
+  position: relative;
+}
+.search-bg{
+  width: 710px;
+  height: 50px;
+  background-color: rgb(113, 202, 113);
+  position: absolute;
+  top: 213px;
+  border-radius: 20px;
+  border: 4px black solid;
+  
+}
+.lp{
+  position: relative;
+  width: 100px;
+  height: 20px;
+  background-color: rgb(89, 139, 231);
+  left: 75px;
+  text-align: center;
+  color: white;
+  font-size: small;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+.a-info{
+  font-size: medium;
+  text-align: left;
+  padding-left: 10px;
+  width: 210px;
+}
+.delbutton{
+  position: absolute;
+  right: 350px;
+  top: 45px;
+  height: 60px;
+}

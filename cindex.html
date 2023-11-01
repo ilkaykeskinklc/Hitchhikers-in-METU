@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitchhikers</title>
+    <link rel="stylesheet" href="./cstyle.css">
+    <link rel="stylesheet" href="./colorstyle.css">
+   
+
+
+
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./cindex.html">Hitchhike</a></li>
+            <li><a href="./register.html">Profile</a></li>
+            <li><a href="./help.html">Help</a></li>
+            <li><a href="./about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <article id="about">
+            <section class="container">
+                <h2 class="today"></h2>
+                <div class="search-bg"></div>
+                <div class="search-box">
+                <input type="text" id="searchBar" onkeyup="nameFunction()" placeholder="Search for Name">
+                <input type="text" id="startBar" onkeyup="startFunction()" placeholder="Search for Starting Place">
+                <input type="text" id="finishBar" onkeyup="finishFunction()" placeholder="Search for Finishing Place">
+                </div>
+                
+                <div class="flex-container">
+                    <!-- car -->
+
+                    <div class="car-container">
+                        <div class="index">
+                            <!--car info-->
+                            <p class="userName">Aydin Koylu's Request</p>
+                            <div class="route-container">
+                                <div class="start">ODTU A1</div>to 
+                                <div class="finish">100.YIL</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">9:00</p>
+                            </div>
+                            <div class="lp">06 AYD 111</div>
+                            <div class="a-info">>It's Urgent</div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1"></span>
+                                <span class="seat seat2 occupied"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3"></span>
+                                <span class="seat seat4"></span>
+                                <span class="seat seat5"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="index">
+                            <p class="userName">Ilkay's Request</p>
+                            <div class="route-container">
+                                <div class="start">Kurtulus</div>to
+                                <div class="finish">ODTU A1</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">10:30</p>
+                            </div>
+                            <div class="lp">06 ILK 222</div>
+                            <div class="a-info">>Take me from the big tree.</div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1 occupied"></span>
+                                <span class="seat seat2 occupied"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3 occupied"></span>
+                                <span class="seat seat4"></span>
+                                <span class="seat seat5 occupied"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex-container">
+                    <!-- car -->
+
+                    <div class="car-container">
+                        <div class="index">
+                            <!--car info-->
+                            <p class="userName">Jack Woods's Request</p>
+                            <div class="route-container">
+                                <div class="start">Hilal</div>to
+                                <div class="finish">ODTU A4</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">9:00</p>
+                            </div>
+                            <div class="lp">06 JAC 333</div>
+                            <div class="a-info">>I have icecreams about to melt!</div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1 occupied"></span>
+                                <span class="seat seat2 occupied"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3"></span>
+                                <span class="seat seat4"></span>
+                                <span class="seat seat5"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="index">
+                            <p class="userName">Zeynep Uzun's Request</p>
+                            <div class="route-container">
+                                <div class="start">ODTU A3</div>to
+                                <div class="finish">Kizilay</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">12:45</p>
+                            </div>
+                            <div class="lp">06 ZEY 444</div>
+                            <div class="a-info"></div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1"></span>
+                                <span class="seat seat2 occupied"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3"></span>
+                                <span class="seat seat4 occupied"></span>
+                                <span class="seat seat5 occupied"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex-container">
+                    <!-- car -->
+
+                    <div class="car-container">
+                        <div class="index">
+                            <!--car info-->
+                            <p class="userName">Mehmet Ali's Request</p>
+                            <div class="route-container">
+                                <div class="start">ODTU A3</div>to
+                                <div class="finish">ODTU A5</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">14:00</p>
+                            </div>
+                            <div class="lp">06 MEH 555</div>
+                            <div class="a-info"></div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1"></span>
+                                <span class="seat seat2 occupied"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3"></span>
+                                <span class="seat seat4 occupied"></span>
+                                <span class="seat seat5"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car-container">
+                        <div class="index">
+                            <p class="userName">Erik Dawson's Ride</p>
+                            <div class="route-container">
+                                <div class="start">ODTU A1</div>to
+                                <div class="finish">100.YIL</div>
+                            </div>
+                            <div class="clock">
+                                <p class="time">15:00</p>
+                            </div>
+                            <div class="lp">34 ERI 666</div>
+                            <div class="a-info"></div>
+                            <button onclick="joinCar()" class="join">Join</button>
+                        </div>
+                        <span class="wheels">
+                            <span class="wheel1"></span>
+                            <span class="wheel2"></span>
+                            <span class="wheel3"></span>
+                            <span class="wheel4"></span>
+                        </span>
+                        <div class="light">
+                            <div class="leftlight"></div>
+                            <div class="rightlight"></div>
+                        </div>
+
+                        <div class="car">
+                            <div class="first-row">
+                                <span class="seat seat1 occupied"></span>
+                                <span class="seat seat2"></span>
+                            </div>
+                            <div class="second-row">
+                                <span class="seat seat3"></span>
+                                <span class="seat seat4"></span>
+                                <span class="seat seat5"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex-containerr"></div>
+                <button class="link-button delbutton" onclick="reload()">Delete</button>
+                <button class="link-button button" id="open">Add New Car</button>
+            </section>
+
+    </div>
+
+
+    </article>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+
+            </button>
+            <div class="modal-header">
+                <h3>Add New Car</h3>
+            </div>
+            <!-- modal -->
+            <div class="modal-content">
+
+                <div class="modal-form">
+                    <div>
+                        <p>Name</p>
+                        <input type="text" id="name" placeholder="Enter Name"/>
+                    </div>
+                    <hr>
+                    <p>Route</p>
+                    <div class="route">
+                        <input id="start" type="text" placeholder="Start"> to
+                        <input id="finish" type="text" placeholder="Finish">
+                    </div>
+                    <hr>
+                    Ride<input type="checkbox" id="ride">
+                    Request <input type="checkbox" id="request">
+                    <hr>
+                    <p>Starting Time</p>
+                    <input type="time" id="time">
+                    <hr>
+                    <p>Licanse Plate</p>
+                    <input type="text" id="plate">
+                    <hr>
+                    <p>Additional Information</p>
+                    <input type="text" id="add-info">
+
+
+                </div>
+
+                <button class="submitButton" onclick="addNewCar()">Add New Car</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./cscript.js"></script>
+
+
+
+</body>
+
+</html>
